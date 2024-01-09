@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-slate-900  dark:text-white text-black flex flex-col">
+    <header class="sticky z-5 bg-yellow-600 text-white top-0">
+        <section class="max-w-4xl mx-auto flex justify-between p-3">
+
+            <h1 class="text-4xl font-medium ">Memory-game 🧠</h1>
+        </section>
+    </header>
+    <main class="max-w-4xl mx-auto flex-1 ">
+        <section class="p-6 mx-auto flex justify-center items-center flex-col">
+            <h2 class="text-3xl text-center font-bold">Match One Image With Other <span class="text-blue-400">To Win The
+                </span> Game</h2>
+            <article id="playground" class="h-[100%] w-[80%] sm:w-[70%]
+                 mt-10 border border-solid border-orange-400 flex flex-row justify-center flex-wrap">
+
+
+
+
+
+            </article>
+        </section>
+    </main>
+    <footer class="sticky bottom-0 w-full z-10 bg-yellow-700 ">
+        <section id="score" class="max-w-4xl  flex justify-between p-3 mx-auto items-center">
+
+            <h3 id="result" class="text-2xl font-medium"></h3>
+            <button id="startBtn"
+                class="border-none bg-yellow-300 text-black py-1 px-3 rounded-md active:bg-red-600">Start</button>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="../globle.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <section class="test">
+        <form class="form" action="">
+            <label class="form-label" for="name">Name :</label>
+            <input class="form-input" type="text" name="name" autocomplete="username" placeholder="Enter your name"
+                minlength="3" maxlength="100" id="name">
+
+            <form class="form" action="">
+                <label class="form-label" for="password">Password :</label>
+                <input class="form-input" type="password" name="password" autocomplete="current-password"
+                    placeholder="Enter your password" minlength="10" maxlength="100" id="password">
+                <button class="btn " type="submit">Submit</button>
+            </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-flow: column;
+            background-color: #333;
+        }
+
+        header,
+        footer {
+            background: whitesmoke;
+            position: sticky;
+            text-align: center;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+        }
+
+        header {
+            top: 0px;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        header div button {
+            border: 1px solid black;
+            background: yellowgreen;
+            padding: 0.5rem;
+        }
+
+        header div button a {
+            color: white;
+        }
+
+        footer {
+            bottom: 0px;
+            padding: 1rem;
+        }
+
+        table {
+            color: black;
+        }
+
+        thead {
+            background: brown;
+            padding: 1rem;
+        }
+
+        tbody {
+            background: burlywood;
+        }
+
+        th {
+            padding: 1rem;
+        }
+
+        th,
+        tb {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>These are our users
+
+        </h1>
+        <div>
+            <p>Click to add new user</p>
+            <button>
+                <a href="http://localhost:3000/users/new">Add</a>
+
+            </button>
+        </div>
+    </header>
+    <main>
+        <table style="border:2px solid black;">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>delete?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(const user of result){ %>
+                    <tr>
+                        <td>
+
+
+                        </td>
+                        <td>
+                            <%= user.id%>
+                        </td>
+                        <td>
+                            <%= user.username%>
+                        </td>
+                        <td>
+                            <%= user.email%>
+                        </td>
+                        <td>
+                            <form action="/users/<%= user.id %>/edit">
+                                <button>Edit</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="http://localhost:3000/users/<%= user.id %>/delete">
+                                <button>Delete</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        Copyrights &copy; All rights reserved.
+    </footer>
+</body>
+
+</html>

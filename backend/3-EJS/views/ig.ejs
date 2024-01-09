@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= `${userData["name"]} Profile` %>
+    </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+            background: #000;
+            color: white;
+            position: sticky;
+            top: 0px;
+            align-items: center;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 2rem;
+        }
+
+        .card {
+            width: 80%;
+            margin: 0px auto;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 1rem;
+            padding: 1rem;
+            background: hotpink;
+            border: 2px solid black;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .card img {
+            display: block;
+            width: 100%;
+            /* height: auto; */
+        }
+
+        .card div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            position: sticky;
+            bottom: 0px;
+            background: #000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <h1>
+            <%= userData["name"]%>
+        </h1>
+        <p>
+            Followers : <%= userData["followers"] %>
+        </p>
+        <p>
+            Following :<%= userData["following"] %>
+        </p>
+    </header>
+    <main>
+        <% for(const post of userData["posts"]) {%>
+            <article class="card">
+                <img src="<%= post.image%>" alt="<%=userData[" name"] %>">
+                <div>
+                    <p>
+                        Likes : <%= post["likes"] %>
+                    </p>
+                    <p>
+                        Comments : <%= post["comments"] %>
+                    </p>
+                </div>
+                <p>
+            </article>
+            <% } %>
+    </main>
+
+    <%- include('./include/footer.ejs') %>
+</body>
+
+</html>

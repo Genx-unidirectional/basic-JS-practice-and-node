@@ -1,0 +1,15 @@
+{
+  "name": "27-backend",
+  "version": "1.0.0",
+  "description": "This is for a test",
+  "main": "1_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ganesh kale",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.6.0",
+    "random-words": "^2.0.0"
+  }
+}
