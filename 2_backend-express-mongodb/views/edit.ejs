@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit user</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: whitesmoke;
+        }
+
+
+        section {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            padding: 1rem;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 0.5rem;
+            background-color: aquamarine;
+            align-items: flex-start;
+            border-radius: 0.8rem;
+        }
+
+
+        input {
+            font-size: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.8rem;
+        }
+
+
+        textarea {
+            border: 0.8rem;
+            font-size: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.8rem;
+        }
+
+        button {
+            background-color: white;
+            border-radius: 0.7rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <form method="post" action="http://localhost:3000/chats/<%= chat.id %>?_method=PATCH">
+            <label for="from">From :</label>
+            <input type="text" name="from" id="from" placeholder="old : <%= chat.from %>">
+            <label for="to">To :</label>
+            <input type="text" name="to" id="to" placeholder="old : <%= chat.to %>">
+            <label for="msg">Message : </label>
+            <textarea name="msg" id="msg" cols="30" rows="10"><%= chat.msg %>
+            </textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>

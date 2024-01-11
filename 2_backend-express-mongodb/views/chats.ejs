@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Whatsapp</h1>
+        <div>
+
+
+            <a href="http://localhost:3000/chats/new">New chat</a>
+
+        </div>
+    </header>
+    <main>
+        <section class="chats">
+            <% for(const chat of chats){%>
+                <article class="card">
+                    <div class="from">
+                        <h2>
+                            ⚪<%= chat.from %> <span class="small">online</span>
+                        </h2>
+                        <div class="fixer">
+                            <form action="http://localhost:3000/chats/<%= chat._id %>/edit">
+
+                                <button class="opsBtn">edit</button>
+                            </form>
+                            <form method="post" action="http://localhost:3000/chats/<%= chat._id%>?_method=DELETE">
+
+                                <button class="opsBtn">delete</button>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="msg">
+                        <p>
+                            <%= chat.msg %>
+                        </p>
+                    </div>
+                    <h3>
+                        <%= chat.to %>
+                    </h3>
+                </article>
+                <% }%>
+        </section>
+    </main>
+    <footer>
+        whatsapp &copy; all copyrights reserved.
+    </footer>
+</body>
+
+</html>

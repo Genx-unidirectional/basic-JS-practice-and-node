@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylenew.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: whitesmoke;
+        }
+
+
+        section {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            padding: 1rem;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 0.5rem;
+            background-color: aquamarine;
+            align-items: flex-start;
+            border-radius: 0.8rem;
+        }
+
+
+        input {
+            font-size: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.8rem;
+        }
+
+
+        textarea {
+            font-size: 1rem;
+            padding: 0.5rem;
+            border: 0.8rem;
+        }
+
+        button {
+            background-color: white;
+            border-radius: 0.7rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form method="post" action="/chats">
+            <label for="from">From : </label>
+            <input type="text" id="from" name="from">
+            <label for="to">From : </label>
+            <input type="text" id="to" name="to">
+            <label for="msg">Message : </label>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter your message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+    </section>
+</body>
+
+</html>

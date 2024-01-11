@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: black;
+}
+
+header, footer{
+    position: sticky;
+    background-color: #27ff17;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+main{
+    flex-grow: 1;
+    padding: 1rem;
+    
+}
+
+main section{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+header{
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opsBtn{
+    background: white;
+    color: black;
+    font-size:1rem ;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+footer{
+    bottom: 0px;
+}
+
+
+.card{
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    background: white;
+    border-radius: 10px;
+}
+
+.card .from, .card h3{
+    position: sticky;
+
+}
+
+.card .from{
+    top: 0px;
+    /* text-align: left; */
+    padding: 0.3rem 1rem;
+    background-color: #27ff17;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .msg{
+    flex-grow: 1;
+    padding: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card .msg p{
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 10px ;
+    color: white;
+    background: rgb(38, 96, 255);
+}
+.card .msg{
+    padding: 2rem 0.5rem;
+}
+/* .card p{
+    padding: 2rem 1rem;
+    text-align: right;
+    bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+
+.small{
+    font-size: 0.5rem;
+}
+
+.card h3{
+    bottom: 0px;
+    padding: 1rem;
+    text-align: right;
+}
+
+
+.fixer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+
