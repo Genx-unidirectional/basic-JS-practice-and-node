@@ -44,4 +44,4 @@ console.log(calculator1.execute(addCmd1)); // output : 20
 
 //Let say we want to undo that added value by AddCommand we just have to pass again the object to undo it
 
-console.log(calculator1.undo(addCmd1)); // output : 0
+console.log(calculator1.undo()); // output : 0
